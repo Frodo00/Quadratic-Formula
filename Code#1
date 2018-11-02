@@ -1,0 +1,40 @@
+print("Ingrese los dígitos en orden tal que la ecuación esté ordenada de la forma ax^2 + bx + c")
+
+while  True:
+
+#Se introducen los valores
+
+    from cmath import sqrt
+    a= input("Ingrese a: ")
+    b= input("Ingrese b: ")
+    c= input("Ingrese c: ")
+    try :
+        a1=float(a)
+        b1=float(b)
+        c1=float(c)
+    except:
+        print("Ingrese los dígitos correctamente, el programa ha finalizado")
+
+#Se realizan las operaciones por separado
+    p1= -1.0*b1
+    p2= b1**2
+    p3= 4.0*a1*c1
+    p4= 2.0*a1
+
+#Se continua el procedimiento
+    cp1= p2-p3
+
+#Se saca la raiz
+    cp2=sqrt(cp1)
+
+#Se derivan las respuestas
+    r1=(p1+cp2)/p4
+    r2=(p1-cp2)/p4
+
+    print ("La respuesta 1: ", r1)
+    print ("La respuesta 2: ", r2)
+
+    fg_terminado= input("Escriba 0 para salir ")
+
+    if fg_terminado is "0":
+        break
